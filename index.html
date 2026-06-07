@@ -7,39 +7,18 @@
       name="description"
       content="A private, browser-based image, audio, and video converter."
     />
-    <meta name="theme-color" content="#f3f1eb" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="data:," />
     <title>Convert</title>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="/convert/" aria-label="Convert home">
-        <span class="brand-mark" aria-hidden="true">C</span>
-        <span>convert</span>
-      </a>
-      <span class="privacy-label">
-        <span class="privacy-dot" aria-hidden="true"></span>
-        stays on your device
-      </span>
-    </header>
-
     <main>
-      <section class="intro" aria-labelledby="page-title">
-        <p class="eyebrow">No uploads. No account. No waiting room.</p>
-        <h1 id="page-title">Convert files<br />without the nonsense.</h1>
-        <p class="lede">
-          Images, audio, and video converted privately in your browser.
-        </p>
-      </section>
+      <h1>Convert</h1>
 
       <section class="converter" aria-label="File converter">
         <input id="file-input" class="visually-hidden" type="file" multiple />
         <button id="drop-zone" class="drop-zone" type="button">
-          <span class="drop-icon" aria-hidden="true">+</span>
-          <span class="drop-copy">
-            <strong>Drop files here</strong>
-            <span>or click to choose</span>
-          </span>
-          <span class="drop-formats">Images · Audio · Video</span>
+          Choose files or drop them here
         </button>
 
         <div id="workspace" class="workspace" hidden>
@@ -57,7 +36,7 @@
               </select>
             </label>
             <button id="add-files" class="button button-secondary" type="button">
-              Add files
+              Add
             </button>
           </div>
 
@@ -72,7 +51,7 @@
 
           <div class="actions">
             <button id="convert-button" class="button button-primary" type="button">
-              Convert files
+              Convert
             </button>
             <button id="cancel-button" class="button button-danger" type="button" hidden>
               Cancel
@@ -83,27 +62,7 @@
           </div>
         </div>
       </section>
-
-      <section class="facts" aria-label="How it works">
-        <div>
-          <span class="fact-number">01</span>
-          <p><strong>Private by default.</strong> Files never leave this tab.</p>
-        </div>
-        <div>
-          <span class="fact-number">02</span>
-          <p><strong>Runs locally.</strong> Your computer does the conversion.</p>
-        </div>
-        <div>
-          <span class="fact-number">03</span>
-          <p><strong>Actually free.</strong> No limits designed to sell you something.</p>
-        </div>
-      </section>
     </main>
-
-    <footer>
-      <span>Built by inkitori</span>
-      <a href="https://github.com/inkitori/convert">Source</a>
-    </footer>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

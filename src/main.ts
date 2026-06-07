@@ -291,7 +291,7 @@ function render(): void {
   );
   convertButton.hidden = converting || !convertible;
   convertButton.disabled = !convertible;
-  convertButton.textContent = completed > 0 ? "Convert remaining" : "Convert files";
+  convertButton.textContent = completed > 0 ? "Convert remaining" : "Convert";
   cancelButton.hidden = !converting;
   cancelButton.disabled = false;
   cancelButton.textContent = "Cancel";
@@ -307,10 +307,6 @@ function createQueueItem(item: QueueItem): HTMLLIElement {
   const row = document.createElement("li");
   row.className = `file-row status-${item.status}`;
   row.dataset.id = item.id;
-
-  const badge = document.createElement("span");
-  badge.className = "file-badge";
-  badge.textContent = item.category.slice(0, 3).toUpperCase();
 
   const info = document.createElement("span");
   info.className = "file-info";
@@ -349,7 +345,7 @@ function createQueueItem(item: QueueItem): HTMLLIElement {
   fill.style.width = `${Math.round(item.progress * 100)}%`;
   track.append(fill);
 
-  row.append(badge, info, action, track);
+  row.append(info, action, track);
   return row;
 }
 
