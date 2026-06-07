@@ -1,11 +1,16 @@
 import { describe, expect, it } from "vitest";
 import {
+  DEFAULT_OUTPUT,
   MAX_BATCH_SIZE,
   MAX_FILE_SIZE,
   detectCategory,
   formatBytes,
   validateFileSizes,
 } from "./formats";
+
+it("uses PNG as the default image output", () => {
+  expect(DEFAULT_OUTPUT.image).toBe("png");
+});
 
 describe("detectCategory", () => {
   it("detects supported file extensions without relying on MIME data", () => {

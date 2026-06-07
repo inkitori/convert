@@ -48,7 +48,7 @@ export const OUTPUTS: Record<
 };
 
 export const DEFAULT_OUTPUT: Record<MediaCategory, OutputFormat> = {
-  image: "webp",
+  image: "png",
   audio: "mp3",
   video: "mp4",
 };
