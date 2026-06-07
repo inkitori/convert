@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A private, browser-based image, audio, and video converter."
+    />
+    <meta name="theme-color" content="#f3f1eb" />
+    <title>Convert</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/convert/" aria-label="Convert home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>convert</span>
+      </a>
+      <span class="privacy-label">
+        <span class="privacy-dot" aria-hidden="true"></span>
+        stays on your device
+      </span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">No uploads. No account. No waiting room.</p>
+        <h1 id="page-title">Convert files<br />without the nonsense.</h1>
+        <p class="lede">
+          Images, audio, and video converted privately in your browser.
+        </p>
+      </section>
+
+      <section class="converter" aria-label="File converter">
+        <input id="file-input" class="visually-hidden" type="file" multiple />
+        <button id="drop-zone" class="drop-zone" type="button">
+          <span class="drop-icon" aria-hidden="true">+</span>
+          <span class="drop-copy">
+            <strong>Drop files here</strong>
+            <span>or click to choose</span>
+          </span>
+          <span class="drop-formats">Images · Audio · Video</span>
+        </button>
+
+        <div id="workspace" class="workspace" hidden>
+          <div class="toolbar">
+            <label>
+              <span>Convert to</span>
+              <select id="format-select" aria-label="Output format"></select>
+            </label>
+            <label>
+              <span>Quality</span>
+              <select id="quality-select" aria-label="Output quality">
+                <option value="small">Smaller file</option>
+                <option value="balanced" selected>Balanced</option>
+                <option value="high">High quality</option>
+              </select>
+            </label>
+            <button id="add-files" class="button button-secondary" type="button">
+              Add files
+            </button>
+          </div>
+
+          <div class="queue-heading">
+            <span id="queue-summary">0 files</span>
+            <button id="clear-button" class="text-button" type="button">Clear</button>
+          </div>
+          <ul id="file-list" class="file-list" aria-label="Selected files"></ul>
+
+          <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+          <div id="progress-status" class="visually-hidden" aria-live="polite"></div>
+
+          <div class="actions">
+            <button id="convert-button" class="button button-primary" type="button">
+              Convert files
+            </button>
+            <button id="cancel-button" class="button button-danger" type="button" hidden>
+              Cancel
+            </button>
+            <button id="zip-button" class="button button-secondary" type="button" hidden>
+              Download ZIP
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts" aria-label="How it works">
+        <div>
+          <span class="fact-number">01</span>
+          <p><strong>Private by default.</strong> Files never leave this tab.</p>
+        </div>
+        <div>
+          <span class="fact-number">02</span>
+          <p><strong>Runs locally.</strong> Your computer does the conversion.</p>
+        </div>
+        <div>
+          <span class="fact-number">03</span>
+          <p><strong>Actually free.</strong> No limits designed to sell you something.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built by inkitori</span>
+      <a href="https://github.com/inkitori/convert">Source</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
